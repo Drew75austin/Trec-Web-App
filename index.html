@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>TREC PAGE</title>
+    <link href="content/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <div class="row">
+
+            <div class="col-lg-12 text-center">
+                <h1>Process Student information</h1>
+                <p class="lead">Enter information below to process student for TREC</p>
+
+                <div class="col-lg-12" id="">
+                    <h4>Service Information</h4>
+                    <div class="form-group col-lg-12">
+                        <input class="form-control input-lg" title=" type=" text" id="TrecServiceURL" value="https://www.trec.state.tx.us/ProcessEdRoster/Service1.asmx?wsdl" readonly>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <input class="form-control input-lg" title=" type=" text" id="ProcessRosterURL" value="http://www.trec.state.tx.us/ProcessRoster" readonly>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <input class="form-control input-lg" title=" type=" text" id="devToken" value="PR_v3!" readonly>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <h4>Batch XML</h4>
+                    <div class="form-group col-lg-12">
+                        <textarea class="input-lg col-lg-12" style="height:400px" id="requestXML"></textarea>
+                    </div>
+                </div>
+            </div> <!-- /row -->
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <br />
+                <input type="button" class="btn-primary" value="Submit Request" id="submitRequest" />
+                <input type="button" class="btn-primary" value="cancel" id="cancel" />
+                <br /><br />
+            </div>
+        </div> <!-- /container full -->
+        <div class="container hidden col-lg-12" id="requestResultLabel">
+            <h4>Request Results</h4><span id="cntLabel" class="alert-success"></span><br/>
+        </div>
+    </form>
+    <div class="col-lg-12 hidden" id="responseTable"></div>
+    <!-- script references -->
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/request.js"></script>
+</body>
+</html>
