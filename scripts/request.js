@@ -63,7 +63,7 @@ $(function () {
                     else{
                         $response.find('Record').each(function () {
                             dataToAppend = dataToAppend + "<tr><td>";
-                            cnt = cnt + 1;
+                            cnt++;
                             $(this).children().each(function () {
                                 if (! $(this).is('InstructorDetailData')) {
                                     dataToAppend = dataToAppend + $(this).text() + "</td><td>";
